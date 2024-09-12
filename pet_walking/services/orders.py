@@ -17,7 +17,7 @@ class OrderService:
             logger.warning(f'Некорректное время начала прогулки (0 или 30 минут): {order.walk_time}')
             raise HTTPException(status_code=400, detail='Прогулка может начинаться только в начале или в половину часа')
 
-        if order.walk_time.hour < 7 or order.walk_time.hour > 23:
+        if order.walk_time.hour < 7 or order.walk_time.hour > 22:
             logger.warning(f'Некорректное время начала прогулки (Не между 7 и 23 часами): {order.walk_time}')
             raise HTTPException(status_code=400, detail='Часы выгула собак: с 7 утра до 23 вечера')
 
