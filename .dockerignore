@@ -1,0 +1,10 @@
+.venv
+.mypy_cache
+.pytest_cache
+__pycache__
+
+poetry.toml
+README.md
+
+db.*
+app.log
